@@ -1,0 +1,625 @@
+/* poppins fonts for whole website */
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@800&family=Poppins:wght@500&display=swap');
+/* font family for some styled paragraph */
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
+/*our recent*/
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  /* font family for whole site */
+  font-family: 'Playpen Sans', cursive;
+  font-family: 'Poppins', sans-serif;
+}
+/* design for scroll bars */
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+}
+ 
+/* Handle */
+ ::-webkit-scrollbar-thumb {
+  background: var(--info-color); 
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color); 
+}
+/* stored color values in to the variables */
+:root{
+  --primary-color:#3b71ca;
+  --secondary-color:#9FA6B2;
+  --info-color:#54B4D3;
+  --warning-color:#E4A11B;
+  --danger-color:#DC4C64;
+  --light-color:#FBFBFB;
+  --style-font:'Edu TAS Beginner', cursive;
+  --my-font:'Gugi', sans-serif;
+}
+/* overall container for web page */
+.main-container{
+  width:100%;
+  background-color:var(--light-color);
+  object-fit:cover;
+  padding:10px;
+}
+/* common style for navigation bar */
+header{
+  width:100%;
+  position:sticky;
+  top:0;
+  z-index:1;
+}
+header nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  align-items:center;
+  background-color:var(--primary-color);
+  height:70px;
+  width:100%; 
+  border-top-left-radius:10px; 
+  border-top-right-radius:10px;  
+}
+/* logo design */
+header nav h1{
+  color:var(--light-color); 
+  font-family: 'Gugi', sans-serif; 
+  font-size:28px;
+  cursor:pointer;
+}
+header nav h1:hover{   
+text-shadow:0 0 5px var(--light-color),0 0 25px var(--danger-color),0 0 50px var(--danger-color),0 0 100px var(--danger-color),0 0 150px var(--danger-color);
+}
+header nav h1:hover i{
+  color:var(--light-color);
+}
+header nav h1 span{
+  font-family: 'Gugi', sans-serif;
+}
+/* camera logo */
+header nav h1 i{
+ color:var(--warning-color);
+}
+nav .nav-links ul{
+  list-style-type:none;
+}
+.nav-links ul li{
+  display:inline-block;
+  padding:5px 15px;
+  transition:all 2s; 
+  text-transform:capitalize;   
+}
+
+.nav-links ul li:hover{
+  border-bottom:none;
+}
+.nav-links ul li a{
+  position:relative;
+}
+.nav-links ul li a::after{
+  content:'';
+  width:0;
+  height:2px;
+  background-color:var(--light-color);
+  position:absolute;
+  left:0;
+  bottom:-2px;
+}
+.nav-links ul li a:hover:after{
+   width:100%;
+   transition: 0.5s ease; 
+}
+.nav-links ul li a{
+  text-decoration:none;
+  color:var(--light-color);
+}
+.nav-links ul li a i{
+  padding-right:5px;
+}
+.nav-links ul{
+  display:flex;
+  gap:10px;
+}
+nav ul li .active{
+    color:var(--warning-color);
+    text-shadow:0px 0px 25px var(--light-color),0px 0px 50px var(--light-color),0px 0px 100px var(--light-color);
+    font-weight:bold;
+    background-color:white;
+    border-radius:10px;
+    padding:0px 5px;
+} 
+/* menubar design */
+nav label{
+  display:none;
+}
+nav .fa-bars{
+  color:rgb(255,255,255);
+  font-size:20px;
+  display:none;
+  cursor:pointer;
+
+}
+nav input[type="checkbox"]{
+  display:none;
+}
+/* responsive header code */
+@media only screen and (max-width:995px) {
+    header nav ul{
+        display:flex;
+        flex-direction:column;
+        background-color:rgba(0,0,0,0.5);
+        width:100%;
+        height:80vh;
+        text-align:center;
+        position:fixed;
+        left:-100%;
+        top:70px;
+        z-index:2;
+        transition:all 2s;
+    }
+     /* this is the code to hide menu and show the X mark */
+     nav label .fa-x{
+      display:none;
+    }
+    nav label,label .fa-bars{
+        display:inline-block;
+    }
+    nav input:checked~.nav-links ul{
+          gap:0;
+          left:0;
+    }
+/* this is the code to hide menu and show the X mark */
+    nav input:checked ~label .fa-bars{
+      display:none;
+ }
+ nav input:checked ~label .fa-x{
+   display:inline-block;
+   font-weight:bold;
+   color:var(--light-color);
+   cursor:pointer;
+}
+    nav input:checked~.nav-links ul li{
+        padding:20px 0px;
+        border-bottom:0;
+    }
+  }
+/* services content designs */
+.services-content .typing-animation-container{
+  width:100%;
+  height:50vh;
+  background-image:url('../images/service3.jpg');
+  display:grid;
+  place-items:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  border:5px double var(--warning-color);
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+}
+.typing-animation-container .typing{
+  width:38ch;
+  font-family:monospace;
+  font-size:4em;
+  border-right:3px solid var(--light-color);
+  white-space: nowrap;
+  overflow:hidden;
+  animation:typing 10s steps(38) infinite alternate,blink 0.5s  infinite alternate;
+  color:var(--light-color); 
+}
+.typing-animation-container .marquee{
+  font-size:60px;
+  font-family:monospace;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:var(--light-color);
+  display:none;
+}
+/* marquee tag insertion */
+@media only screen and (max-width:1146px){
+  .typing-animation-container .typing{
+     font-size:3em;
+  }
+}
+@media only screen and (max-width:818px){
+  .typing-animation-container .typing{
+     font-size:2.5em;
+  }
+}
+@media only screen and (max-width:685px){
+  .typing-animation-container .typing{
+     font-size:2em;
+  }
+}
+@media only screen and (max-width:575px){
+  .typing-animation-container .typing{
+     font-size:2em;
+  }
+}
+@media only screen and (max-width:557px){
+  .typing-animation-container .marquee{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:var(--primary-color);
+  }
+  .typing-animation-container .typing{
+     font-size:2em;
+     display:none;
+    }
+} 
+@keyframes typing{
+  from{
+    width:0;
+  }
+}
+/* animation for cursor */
+@keyframes blink{
+    50%{
+      border-color:transparent;
+    }
+}
+/* design for our service lists */
+.our-services-menu .services-list{
+  text-align:center;
+  width:50%;
+}
+.services-list ul{
+  display:inline-block;
+  text-align:left;
+  list-style:none;
+}
+h1{
+  font-family:var(--my-font); 
+  letter-spacing:5px; 
+  font-size:40px;
+  text-align:center;
+  padding:5px;
+}
+.our-services-menu .services-list h1{
+  font-family:var(--my-font); 
+  letter-spacing:5px; 
+  font-size:50px;
+  text-align:center;
+}
+.our-services-menu .services-list{
+  background-image:url('../images/service2.jpg');
+  color:var(--light-color);
+  object-fit: cover;
+}
+.our-services-menu .services-list p{
+  font-size:20px;
+  padding:10px 0px;
+}
+/* style tick mark in list */
+.services-list ul li{
+  padding:10px;
+}
+.services-list ul li i{
+  color:var(--light-color);
+  padding-right:10px;
+}
+.our-services-menu .service-img-container{
+  width:50%;
+  background-color:yellow;
+  height:730px;
+  border-radius:10px;
+}
+.service-img-container img{
+  width:100%;
+  height:100%;
+  border-radius:10px;
+}
+.our-services-menu{
+  display:flex;
+  gap:10px;
+}
+@media only screen and (max-width:995px){
+  .our-services-menu{
+    flex-direction:column;
+  }
+  .our-services-menu .services-list{
+    width:100%;
+  }
+  .our-services-menu .service-img-container{
+    width:100%;
+  }
+}
+/* our services sample event photos styles */
+.our-service-sample .wedding-sample .wedding-card-container{
+  width:100%;
+}
+/* sample image card design */
+.our-service-sample .wedding-sample .img-card{
+  width:300px;
+  height:400px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  transition:ease 0.5s;
+  cursor:pointer;
+ 
+}
+.wedding-sample .img-card .img-section{
+  width:100%;
+  height:90%;
+}
+.img-card .img-section img{
+  width:100%;
+  height:100%;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  object-fit:cover;
+}
+.wedding-sample .img-card .img-description{
+  width:100%;
+  height:10%;
+  background-color:var(--primary-color);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+  color:var(--light-color);
+}
+.wedding-sample .img-card:hover{
+  transform:scale(1.1);
+}
+/* responsive code for wedding sample */
+.wedding-sample{
+  padding:10px;
+}
+.wedding-sample .wedding-card-container{
+  display:grid;
+    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    place-items:center;
+    padding:10px 0px;
+}
+/* mediaquery for wedding sample */
+@media only screen and (min-width:320px) and (max-width:374px) {
+  .wedding-sample .wedding-card-container .img-card{
+    width:90%;
+  }
+  .wedding-sample .wedding-card-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+  }
+}
+@media only screen and (min-width:375px) and (max-width:669px) {
+  .wedding-sample .wedding-card-container .img-card{
+    width:80%;
+  }
+}
+/* Birthday sample */
+.our-service-sample .birthday-sample .img-card{
+  width:300px;
+  height:400px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  transition:ease 0.5s;
+  cursor:pointer;
+}
+.birthday-sample .img-card .img-section{
+  width:100%;
+  height:90%;
+}
+.img-card .img-section img{
+  width:100%;
+  height:100%;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  object-fit:cover;
+}
+.birthday-sample .img-card .img-description{
+  width:100%;
+  height:10%;
+  background-color:var(--primary-color);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+  color:var(--light-color);
+}
+.birthday-sample .img-card:hover{
+  transform:scale(1.1);
+}
+/* responsive code for birtday sample */
+.birthday-sample{
+  padding:10px;
+}
+.birthday-sample .birthday-card-container {
+  display:grid;
+    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    place-items:center;
+    padding:10px 0px;
+}
+
+.our-services .services-card-container{
+  width:100%;
+  background-color:red;
+}
+/* mediaquery for birthday sample */
+@media only screen and (min-width:320px) and (max-width:374px) {
+  .birthday-sample .birthday-card-container .img-card{
+    width:90%;
+  }
+  .birthday-sample .birthday-card-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+  }
+}
+@media only screen and (min-width:375px) and (max-width:669px) { 
+  .birthday-sample .birthday-card-container .img-card{
+    width:80%;
+  }
+}
+/* maternity sample */
+.our-service-sample .maternity-sample .img-card{
+  width:300px;
+  height:400px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  transition:ease 0.5s;
+  cursor:pointer;
+}
+.maternity-sample .img-card .img-section{
+  width:100%;
+  height:90%;
+}
+.img-card .img-section img{
+  width:100%;
+  height:100%;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  object-fit:cover;
+}
+.maternity-sample .img-card .img-description{
+  width:100%;
+  height:10%;
+  background-color:var(--primary-color);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+  color:var(--light-color);
+}
+.maternity-sample .img-card:hover{
+  transform:scale(1.1);
+}
+/* responsive code for birtday sample */
+.maternity-sample{
+  padding:10px;
+}
+.maternity-sample .maternity-card-container {
+  display:grid;
+    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    place-items:center;
+    padding:10px 0px;
+}
+/* mediaquery for birthday sample */
+@media only screen and (min-width:320px) and (max-width:374px) {
+  .maternity-sample .maternity-card-container .img-card{
+    width:90%;
+  }
+  .maternity-sample .maternity-card-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+  }
+}
+@media only screen and (min-width:375px) and (max-width:669px) {
+  
+  .maternity-sample .maternity-card-container .img-card{
+    width:80%;
+  }
+}
+/* switch on button */
+.services-content button{
+  padding:10px;
+}
+.services-content .switchon{
+   text-align:center;
+   margin:10px;
+}
+.switchon a{
+  text-decoration:none;
+}
+/* footer design */
+footer{
+  background-color:var(--primary-color);
+}
+/* common style for footer content  4 section in footer*/
+footer .foot-sub-content{
+  width:300px;
+  text-align:left;
+  text-transform:capitalize;
+  padding:5px;
+}
+footer .foot-sub-content h3{
+  text-align:left;
+  padding-bottom:10px;
+}
+footer .foot-sub-content p{
+  padding:5px 0px; 
+}
+footer .foot-about{
+  line-height:2em;
+}
+/* for icon right padding */
+footer .foot-sub-content i{
+  padding-right:15px;
+}
+footer .footer-content{
+  width:100%;
+  background-color:var(--primary-color);
+  display:grid;
+  gap:5px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  place-items:center;
+  padding:10px 0px;
+  color:var(--light-color);
+}
+footer .footer-content .foot-contact p:last-child{
+ margin-bottom:55px;
+}
+footer .footer-content .foot-links p:last-child{
+  margin-bottom:30px;
+}
+/* copyright section design */
+footer .copy-right{
+  width:100%;
+  background-color:var(--primary-color);
+  color:var(--light-color);
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  border-top:2px solid var(--secondary-color);
+}
+.copy-right .social-media{
+  display:flex;
+  gap:20px;
+}
+.copy-right .social-media i{
+   font-size:25px;
+   color:var(--light-color);
+}
+/* media query for footer */
+@media only screen and (min-width:930px) and (max-width:1234px) {
+  footer .footer-content{
+      grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+  }
+}
+@media only screen and (min-width:930px) and (max-width:1234px) {
+  footer .footer-content{
+      grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+  }
+}
+@media only screen and (min-width:1230px) and (max-width:1234px) {
+  footer .footer-content{
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  }
+}
+@media only screen and (min-width:320px) and (max-width:353px) {
+  footer .copy-right .social-media{
+         flex-wrap:wrap;
+         gap:5px;
+  }  
+}

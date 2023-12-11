@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>photogaraphy</title>
+   <!-- external stylesheet -->
+   <link rel="stylesheet" type="text/css" href="./css/signup.css"/>
+   <!-- fontawesome CDN for Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+   <!-- home page design-->
+   <main class="main-container">
+      <!-- header part designs -->
+      <header>
+         <!-- navigation bar design -->
+         <nav>
+            <h1>sathish <i class="fa-solid fa-camera"></i> <span>photography </span></h1>
+            <!-- menu bar icon -->
+            <input type="checkbox"  id="show-submenu"/>
+            
+            <div class="nav-links">
+               <ul>
+                  <li><a href="./index.html">home</a></li>
+                  <li><a href="./about.html">about</a></li>
+                  <li><a href="./services.html">services</a></li>
+                  <li><a href="./gallery.html">gallery</a></li>
+                  <li><a href="./contacts.html">contacts</a></li>
+                  <li ><a href="./signup.html" class="active">login</a></li>
+               </ul>
+            </div>
+            <label for="show-submenu"><i class="fa-solid fa-bars"></i></label>
+            <label for="show-submenu"><i class="fa-solid fa-x"></i></label>
+         </nav>
+      </header>
+      <!-- logo animation area-->
+      <section class="signup-content">
+         <img src="./images/login.jpg"/>
+            <div class="form-container">
+             <h1>Login</h1>
+               <form>
+                  <div>
+                     <label for="fname">First Name</label>
+                     <input type="text" id="fname"/>
+                  </div>
+                  <div>
+                     <label for="lname">Lsast Name</label>
+                     <input type="text" id="lname"/>
+                  </div>
+                  <div>
+                     <label for="gender">Gender</label>
+                     
+                     <div class="radio">
+                        <input type="radio" id="male" name="gender"/>
+                        <label for="male" class="radiolabel">Male</label>
+                        <input type="radio" id="female" name="gender"/>
+                        <label for="female" class="radiolabel">female</label>
+                        <input type="radio" id="transgender" name="gender"/>
+                        <label for="female" class="radiolabel">transgender</label>
+                     </div>
+                  </div>
+                  <div>
+                     <label for="mail">Email</label>
+                     <input type="text" id="mail"/>
+                  </div>
+                  <div>
+                     <label for="pwd">Password</label>
+                     <input type="password" id="pwd"/>
+                  </div>
+                  <div>
+                     <input type="submit" value="login"/>
+                     <p>Do you have account? <a href="signin.html">Sign Up</a></p>
+                  </div>
+                  <span>OR</span>
+                  <button>Continue with <i class="fa-brands fa-facebook"></i></button>
+                  <button>Continue with <i class="fa-brands fa-google"></i></button>
+                  <button>Continue with <i class="fa-brands fa-twitter"></i></button>
+               </form>
+            </div>  
+      </section>
+      <!-- footer section -->
+      <footer>
+         <section class="footer-content"> 
+          <div class="foot-about foot-sub-content">
+             <h3>sathish photography</h3>
+             <p>
+                Hi,we are from Sathish photography
+                we are providing all photography services with reasonable cost.
+                please give your supports and reviews to upgrade our quality.&nbsp;
+                <q>Your Satisfaction Is Our Satisfaction</q>
+             </p>
+          </div>
+          <div class="foot-services foot-sub-content ">
+             <h3>Services</h3>
+             <p>Event photography.</p>
+             <p>Location and architectural photography.</p>
+             <p>Lifestyle photography</p>
+             <p>Food photography</p>
+             <p>Social media photography</p>
+             <p>wild life photography</p>
+          </div>
+          <div class="foot-links foot-sub-content">
+            <h3>Useful links</h3>
+            <p><i class="fa-brands fa-google"></i>www.sathishphotography.com</p>
+            <p><i class="fa-brands fa-instagram"></i>our instagram page</p>
+            <p><i class="fa-brands fa-wikipedia-w"></i>wikipedia page</p>
+            <p><i class="fa-brands fa-hire-a-helper"></i>help</p>
+            <p><i class="fa-brands fa-youtube"></i>you tube page</p>
+            <p><i class="fa-brands fa-facebook"></i>facebook page</p>
+          </div>
+          <div class="foot-contact foot-sub-content">
+             <h3>contact</h3>
+             <p><i class="fa-solid fa-house"></i>villupuram</p>
+             <p><i class="fa-solid fa-envelope"></i>sathishsaro@gnail.com</p>
+             <p><i class="fa-brands fa-telegram"></i>telegram</p>
+             <p><i class="fa-solid fa-phone"></i>8778853411</p>
+             <p><i class="fa-solid fa-tty"></i>9585677689</p>
+          </div>
+         </section>
+          <div class="copy-right">
+            <p>&copy; Copy right:sathish photography</p>
+            <div class="social-media">
+             <i class="fa-brands fa-instagram"></i>
+             <i class="fa-brands fa-youtube"></i>
+             <i class="fa-brands fa-facebook"></i>
+             <i class="fa-brands fa-telegram"></i>
+             <i class="fa-brands fa-twitter"></i>
+            </div>
+          </div>
+       </footer>
+    </main>
+</body>
+</html>
