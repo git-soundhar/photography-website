@@ -322,7 +322,7 @@ nav input[type="checkbox"]{
         transform:scale(1.1);
     }
 }
-@media only screen and (min-width:320px) and (max-width:374px){
+@media only screen and (min-width:320px) and (max-width:375px){
     .our-recent{
         width:100%;
     }
